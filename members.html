@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Members</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+#biodata{
+margin:20px;
+padding:20px;
+border-radius:20px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+display:none;
+animation:fade .4s ease;
+}
+
+@keyframes fade{
+from{opacity:0; transform:translateY(15px);}
+to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<header><h1>Members</h1></header>
+<nav><a href="index.html">Home</a></nav>
+
+<section class="grid">
+
+<div class="card" onclick="showMember('bangchan')">
+<img src="assets/members/bangchan.jpg">
+<h3>Bang Chan</h3>
+</div>
+
+<div class="card" onclick="showMember('leeknow')">
+<img src="assets/members/leeknow.jpg">
+<h3>Lee Know</h3>
+</div>
+
+<div class="card" onclick="showMember('changbin')">
+<img src="assets/members/changbin.jpg">
+<h3>Changbin</h3>
+</div>
+
+<div class="card" onclick="showMember('hyunjin')">
+<img src="assets/members/hyunjin.jpg">
+<h3>Hyunjin</h3>
+</div>
+
+<div class="card" onclick="showMember('han')">
+<img src="assets/members/han.jpg">
+<h3>Han</h3>
+</div>
+
+<div class="card" onclick="showMember('felix')">
+<img src="assets/members/felix.jpg">
+<h3>Felix</h3>
+</div>
+
+<div class="card" onclick="showMember('seungmin')">
+<img src="assets/members/seungmin.jpg">
+<h3>Seungmin</h3>
+</div>
+
+<div class="card" onclick="showMember('in')">
+<img src="assets/members/in.jpg">
+<h3>I.N</h3>
+</div>
+
+</section>
+
+<!-- PANEL BIODATA -->
+<div id="biodata"></div>
+
+<script>
+const data={
+bangchan:{
+name:"Bang Chan",
+real:"Christopher Bang",
+birth:"Oct 3, 1997",
+position:"Leader, Producer, Vocalist",
+emoji:"🐺",
+nation:"Australia"
+},
+leeknow:{
+name:"Lee Know",
+real:"Lee Minho",
+birth:"Oct 25, 1998",
+position:"Main Dancer",
+emoji:"🐰",
+nation:"Korea"
+},
+changbin:{
+name:"Changbin",
+real:"Seo Changbin",
+birth:"Aug 11, 1999",
+position:"Main Rapper",
+emoji:"🐷🐰",
+nation:"Korea"
+},
+hyunjin:{
+name:"Hyunjin",
+real:"Hwang Hyunjin",
+birth:"Mar 20, 2000",
+position:"Main Dancer, Visual",
+emoji:"🦙",
+nation:"Korea"
+},
+han:{
+name:"Han",
+real:"Han Jisung",
+birth:"Sep 14, 2000",
+position:"Rapper, Producer",
+emoji:"🐿️",
+nation:"Korea"
+},
+felix:{
+name:"Felix",
+real:"Lee Felix",
+birth:"Sep 15, 2000",
+position:"Rapper",
+emoji:"🐥",
+nation:"Australia"
+},
+seungmin:{
+name:"Seungmin",
+real:"Kim Seungmin",
+birth:"Sep 22, 2000",
+position:"Main Vocalist",
+emoji:"🐶",
+nation:"Korea"
+},
+in:{
+name:"I.N",
+real:"Yang Jeongin",
+birth:"Feb 8, 2001",
+position:"Maknae, Vocalist",
+emoji:"🦊",
+nation:"Korea"
+}
+};
+
+function showMember(id){
+const m=data[id];
+const bio=document.getElementById("biodata");
+
+bio.style.display="block";
+bio.innerHTML=`
+<h2>${m.name} ${m.emoji}</h2>
+<p><b>Real Name:</b> ${m.real}</p>
+<p><b>Birthday:</b> ${m.birth}</p>
+<p><b>Position:</b> ${m.position}</p>
+<p><b>Nationality:</b> ${m.nation}</p>
+`;
+window.scrollTo({top:bio.offsetTop-50,behavior:"smooth"});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#0b1d3a,#1f4fff);
+color:white;
+}
+
+/* NAVBAR */
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+padding:15px;
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(12px);
+}
+
+nav a{
+text-decoration:none;
+color:white;
+padding:8px 14px;
+border-radius:20px;
+background:rgba(255,255,255,.15);
+transition:.3s;
+}
+
+nav a:hover{
+background:white;
+color:#1f4fff;
+}
+
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 18px; /* lebih kecil */
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* area logo kiri */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* LOGO KECIL */
+.logo {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+/* tulisan */
+.site-name {
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #2b6fff;
+}
+/* HEADER */
+header{
+text-align:center;
+padding:40px 20px;
+}
+
+h1{
+letter-spacing:3px;
+font-weight:500;
+}
+
+/* CARD */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.card{
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(10px);
+border-radius:20px;
+padding:15px;
+transition:.35s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-6px) scale(1.05);
+background:rgba(255,255,255,.25);
+}
+
+.card img{
+width:100%;
+border-radius:15px;
+}
+
+/* TEXT BOX */
+.box{
+max-width:800px;
+margin:auto;
+padding:20px;
+background:rgba(255,255,255,.1);
+border-radius:20px;
+}
+
+.albums{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    gap:25px;
+    padding:40px;
+}
+
+.album-card{
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    border-radius:20px;
+    padding:15px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.album-card:hover{
+    transform: translateY(-8px) scale(1.03);
+}
+
+.album-card img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:10px;
+}
+
+.album-card h3{
+    font-size:16px;
+    letter-spacing:2px;
+}
+
+.album-card p{
+    font-size:13px;
+    opacity:0.7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  
+}
+
+/* animasi */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 20px #6fb6ff; }
+  50% { box-shadow: 0 0 40px #9cd2ff; }
+  100% { box-shadow: 0 0 20px #6fb6ff; }
+}

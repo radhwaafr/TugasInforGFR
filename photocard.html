@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Photocard Ceremony</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.pc{perspective:1000px;height:240px}
+.inner{position:relative;width:100%;height:100%;transition:.7s;transform-style:preserve-3d}
+.pc.flip .inner{transform:rotateY(180deg)}
+
+.front,.back{
+position:absolute;width:100%;height:100%;
+backface-visibility:hidden;border-radius:20px;overflow:hidden;
+}
+
+.front img{width:100%;height:100%;object-fit:cover}
+
+.back{
+background:linear-gradient(160deg,#ffffff,#7aa7ff);
+color:#0b1d3a;
+display:flex;flex-direction:column;justify-content:center;align-items:center;
+transform:rotateY(180deg);
+font-weight:600;
+}
+</style>
+</head>
+
+<body>
+<header><h1>SKZOO PHOTOCARDS</h1></header>
+<nav><a href="index.html">Home</a></nav>
+
+<section class="grid">
+
+<div class="pc" onclick="this.classList.toggle('flip')">
+<div class="inner">
+<div class="front"><img src="assets/members/PC-BANGCHAN.jpg"></div>
+<div class="back">Bangchan ✦ Wolfchan</div>
+</div>
+</div>
+
+<div class="pc" onclick="this.classList.toggle('flip')">
+<div class="inner">
+<div class="front"><img src="assets/members/PC-LEEKNOW.jpg"></div>
+<div class="back">Lee Know ✦ Leebit</div>
+</div>
+</div>
+
+<div class="pc" onclick="this.classList.toggle('flip')">
+<div class="inner">
+<div class="front"><img src="assets/members/PC-CHANGBIN.jpg"></div>
+<div class="back">Changbin ✦ Dwaekki</div>
+</div>
+</div>
+  
+  <div class="pc" onclick="this.classList.toggle('flip')">
+<div class="inner">
+<div class="front"><img src="assets/members/PC-HYUNJIN.jpg"></div>
+<div class="back">Hyunjin ✦ Jiniret</div>
+</div>
+</div>
+  
+  <div class="pc" onclick="this.classList.toggle('flip')">
+<div class="inner">
+<div class="front"><img src="assets/members/PC-HAN.jpg"></div>
+<div class="back">Han ✦ HanQuokka</div>
+</div>
+</div>
+
+  <div class="pc" onclick="this.classList.toggle('flip')">
+<div class="inner">
+<div class="front"><img src="assets/members/PC-FELIX.jpg"></div>
+<div class="back">Felix ✦ Bbokari</div>
+</div>
+</div>
+  
+  <div class="pc" onclick="this.classList.toggle('flip')">
+<div class="inner">
+<div class="front"><img src="assets/members/PC-SEUNGMIN.jpg"></div>
+<div class="back">Seungmin ✦ PuppyM</div>
+</div>
+</div>
+  
+  <div class="pc" onclick="this.classList.toggle('flip')">
+<div class="inner">
+<div class="front"><img src="assets/members/PC-IN.jpg"></div>
+<div class="back">I.N ✦ FoxI.Ny</div>
+</div>
+</div>
+  
+</section>
+</body>
+</html>
